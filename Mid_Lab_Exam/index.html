@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./script/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid Exam</title>
+</head>
+
+<body>
+    <form onsubmit="return collectData();">
+        <label for="name">Name </label>
+        <input type="text" id="name" placeholder="Enter Your Full Name" required>
+        <span id="errorname" style="color: tomato;"></span><br>
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter Your Email" required>
+        <span id="erroremail" style="color: tomato;"></span><br>
+        <label for="Cname">Company</label>
+        <input type="text" id="Cname" placeholder="Company Name">
+        <span id="errorCname" style="color: tomato;"></span>
+        <fieldset>
+            <legend>Attendance Type</legend>
+            <label for="virtual">Virtual</label>
+            <input type="radio" name="attendance" id="virtual" value="Virtual">
+            <label for="person">In-Person</label>
+            <input type="radio" name="attendance" id="person" value="In-Person" required>
+        </fieldset>
+        <span id="errorattend" style="color: tomato;"></span><br>
+        <button type="submit">Register</button>
+
+        
+    </form>
+<button type="button" onclick="staticdisplay()" id="btn">Show Event Analytics</button>
+        <div id="analysis" hidden>
+            <p>Total Registration: <span id="totalcnt">0</span></p>
+            <p>Virtual: <span id="vcnt">0</span></p>
+            <p>In-Person: <span id="pcnt">0</span></p>
+        </div>
+</body>
+
+</html>
